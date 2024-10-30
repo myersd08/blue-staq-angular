@@ -1,0 +1,15 @@
+<article class="poem-container" *ngIf="poem">
+  <header class="poem-header">
+    <h2 class="poem-title">{{ poem.title }}</h2>
+    <p class="poem-author">by {{ poem.author }}</p>
+  </header>
+  <div class="poem-content">
+    <p 
+      *ngFor="let line of poem.lines" 
+      class="poem-line"
+      [class.empty-line]="line.trim() === ''"
+    >
+      {{ line || '&nbsp;' }}
+    </p>
+  </div>
+</article> 

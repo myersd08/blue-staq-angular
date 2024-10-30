@@ -1,0 +1,10 @@
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    placeholder="Search poems..."
+    (keyup.enter)="onSearch()"
+  />
+  <button class="search-button" (click)="onSearch()">Search</button>
+  <button class="random-button" (click)="onRandomPoem()">Random Poem</button>
+</div> 

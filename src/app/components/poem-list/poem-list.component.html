@@ -1,0 +1,16 @@
+<div class="poem-list" *ngIf="poems">
+  <div *ngIf="poems.length > 0; else noResults">
+    <div *ngFor="let poem of poems" 
+         (click)="onSelect(poem)"
+         class="poem-item">
+      <h3>{{ poem.title }}</h3>
+      <p>by {{ poem.author }}</p>
+    </div>
+  </div>
+  
+  <ng-template #noResults>
+    <div class="no-results">
+      <p>No poems found</p>
+    </div>
+  </ng-template>
+</div> 

@@ -1,0 +1,13 @@
+<main class="main">
+  <div class="content">
+    <div>
+      <h1 class="centered-title">{{ title }}</h1>
+      <app-poem-search (randomPoem)="onRandomPoem()" (search)="onSearch($event)"></app-poem-search>
+      <app-poem [poem]="selectedPoem"></app-poem>
+      <app-poem-list [poems]="poems" (poemSelected)="onPoemSelected($event)"></app-poem-list>
+   </div>
+
+  </div>
+</main>
+
+<router-outlet></router-outlet>
