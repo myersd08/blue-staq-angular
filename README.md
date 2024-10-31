@@ -1,7 +1,10 @@
 # Review Notes
-This is a basic project. I also used the app.component as a controller in this case.  If the app were to expand, it might make sense to employ more of a controller pattern, or even module federation.
+This is a basic project with a single page website. I used the app.component as a controller in this case.  If the app were to expand, it might make sense to employ more of a controller pattern, or even module federation.
+- Search the poetry database
+- Displays a list of search results to select from (selecting displays the poem)
+- You can also get a random poem by pushing the "Random" button.  This can be done repeatedyly.
 
-One feature that would be fun to put into this app is a checkbox to indicate if you think musicians are poets.  If it is checked, you would also query a music api when searching. In this case it might make sense to take advantage of observables (forkJoin) when calling multiple apis at the same time.
+One feature that would be fun to put into this app is a checkbox to indicate if you think musicians are poets.  If it is checked, you would also query a music api (Spotify?) when searching. In this case it might make sense to take advantage of observables (forkJoin) when calling multiple apis at the same time.  This feature would also require some UI updates to indicate if the search result source was music or poetry.
 
 # Poetry
 
